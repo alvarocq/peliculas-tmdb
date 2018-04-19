@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      {{item.title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card>
+		  <img  src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}"/>
+		  <ion-card-content>
+		    <ion-card-title>
+		      {{item.title}}
+		      </ion-card-title>
+		    <ion-list>
+		    	<ion-item>
+		    		<ion-icon name="ios-book" item-left></ion-icon>
+		    		<ion-note item-right>
+		    			{{item.overview}}
+		    		</ion-note>
+		    	</ion-item>
+		    	<ion-item>
+		    		<ion-icon name="ios-calendar" item-left></ion-icon>
+		    		Fecha de lanzamiento
+		    		<ion-note item-right>
+		    			{{item.release_date}}
+		    		</ion-note>
+		    	</ion-item>
+		    	<ion-item>
+		    		<ion-icon name="thumbs-up" item-left></ion-icon>
+		    		Puntuación
+		    		<ion-note item-right>
+		    			{{item.vote_average}}
+		    		</ion-note>
+		    	</ion-item>
+		    </ion-list>
+		    <a ion-button block target="_blank" href="https://www.netflix.com">Ver en Netflix</a>
+		  </ion-card-content>
+	</ion-card>
+</ion-content>

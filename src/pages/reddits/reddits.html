@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Buscador de películas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<ion-label fixed>nombrepeli</ion-label> 
+			<ion-select (ionChange)="changenombrepeli()"[(ngModel)]="nombrepeli" name="nombrepeli">
+				<ion-option value="harry">Harry</ion-option>
+				<ion-option value="matrix">Matrix</ion-option>
+				<ion-option value="anillos">Anillos</ion-option>
+
+			</ion-select>
+		</ion-item>
+	</ion-list>
+	<ion-list>
+		
+		<ion-item *ngFor="let item of items">
+
+			<h2>{{item.title}}</h2>
+
+			<button ion-button clear item-right (click)="viewItem(item)">Ver más</button>
+		</ion-item> 
+	</ion-list>
+</ion-content>
